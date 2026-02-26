@@ -1,6 +1,9 @@
 {
   "version": "v1",
-  "status": "error",
-  "error_message": "The data file is missing the 'close' column. It only has: ['timestamp,open,high,low,close,volume_btc,volume_usd']",
-  "latency_ms": 11
+  "rows_processed": 9996,
+  "metric": "signal_rate",
+  "value": 0.4991,
+  "latency_ms": 23,
+  "seed": 42,
+  "status": "success"
 }

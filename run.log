@@ -1,18 +1,24 @@
-2026-02-26 11:19:07 | INFO     | ============================================================
-2026-02-26 11:19:07 | INFO     | STARTING THE JOB
-2026-02-26 11:19:07 | INFO     | ============================================================
-2026-02-26 11:19:07 | INFO     | Settings loaded and checked!
-2026-02-26 11:19:07 | INFO     |   Seed value: 42
-2026-02-26 11:19:07 | INFO     |   Calculation window: 5
-2026-02-26 11:19:07 | INFO     |   Version: v1
-2026-02-26 11:19:07 | INFO     | Set the random seed to 42
-2026-02-26 11:19:07 | ERROR    | Something went wrong: The data file is missing the 'close' column. It only has: ['timestamp,open,high,low,close,volume_btc,volume_usd']
-Traceback (most recent call last):
-  File "E:\rep\mlops-tasks\run.py", line 179, in run_pipeline
-    data_table = read_data_file(inputs.input, messenger)
-  File "E:\rep\mlops-tasks\run.py", line 111, in read_data_file
-    raise ValueError(f"The data file is missing the 'close' column. It only has: {list(data_table.columns)}")
-ValueError: The data file is missing the 'close' column. It only has: ['timestamp,open,high,low,close,volume_btc,volume_usd']
-2026-02-26 11:19:07 | INFO     | ============================================================
-2026-02-26 11:19:07 | INFO     | JOB ENDED WITH ERRORS
-2026-02-26 11:19:07 | INFO     | ============================================================
+2026-02-26 11:23:06 | INFO     | ============================================================
+2026-02-26 11:23:06 | INFO     | STARTING THE JOB
+2026-02-26 11:23:06 | INFO     | ============================================================
+2026-02-26 11:23:06 | INFO     | Settings loaded and checked!
+2026-02-26 11:23:06 | INFO     |   Seed value: 42
+2026-02-26 11:23:06 | INFO     |   Calculation window: 5
+2026-02-26 11:23:06 | INFO     |   Version: v1
+2026-02-26 11:23:06 | INFO     | Set the random seed to 42
+2026-02-26 11:23:06 | INFO     | Data loaded successfully: 10000 rows found.
+2026-02-26 11:23:06 | INFO     | Working on the rolling average calculations...
+2026-02-26 11:23:06 | INFO     | Calculated the average trend over 5 days. Skipped 4 rows at the start.
+2026-02-26 11:23:06 | INFO     | Generating signals based on price vs average...
+2026-02-26 11:23:06 | INFO     | Signal generation complete! 9996 valid points calculated. Found 4989 'up' signals and 5007 'down' signals.
+2026-02-26 11:23:06 | INFO     | Here is a summary of the results:
+2026-02-26 11:23:06 | INFO     |   version: v1
+2026-02-26 11:23:06 | INFO     |   rows_processed: 9996
+2026-02-26 11:23:06 | INFO     |   metric: signal_rate
+2026-02-26 11:23:06 | INFO     |   value: 0.4991
+2026-02-26 11:23:06 | INFO     |   latency_ms: 23
+2026-02-26 11:23:06 | INFO     |   seed: 42
+2026-02-26 11:23:06 | INFO     |   status: success
+2026-02-26 11:23:06 | INFO     | ============================================================
+2026-02-26 11:23:06 | INFO     | JOB FINISHED SUCCESSFULLY
+2026-02-26 11:23:06 | INFO     | ============================================================
