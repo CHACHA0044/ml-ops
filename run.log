@@ -1,18 +1,18 @@
-2026-02-26 11:18:17 | INFO     | ============================================================
-2026-02-26 11:18:17 | INFO     | STARTING THE JOB
-2026-02-26 11:18:17 | INFO     | ============================================================
-2026-02-26 11:18:17 | INFO     | Settings loaded and checked!
-2026-02-26 11:18:17 | INFO     |   Seed value: 42
-2026-02-26 11:18:17 | INFO     |   Calculation window: 5
-2026-02-26 11:18:17 | INFO     |   Version: v1
-2026-02-26 11:18:17 | INFO     | Set the random seed to 42
-2026-02-26 11:18:17 | ERROR    | Something went wrong: The data file is missing the 'close' column. It only has: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+2026-02-26 11:19:07 | INFO     | ============================================================
+2026-02-26 11:19:07 | INFO     | STARTING THE JOB
+2026-02-26 11:19:07 | INFO     | ============================================================
+2026-02-26 11:19:07 | INFO     | Settings loaded and checked!
+2026-02-26 11:19:07 | INFO     |   Seed value: 42
+2026-02-26 11:19:07 | INFO     |   Calculation window: 5
+2026-02-26 11:19:07 | INFO     |   Version: v1
+2026-02-26 11:19:07 | INFO     | Set the random seed to 42
+2026-02-26 11:19:07 | ERROR    | Something went wrong: The data file is missing the 'close' column. It only has: ['timestamp,open,high,low,close,volume_btc,volume_usd']
 Traceback (most recent call last):
   File "E:\rep\mlops-tasks\run.py", line 179, in run_pipeline
     data_table = read_data_file(inputs.input, messenger)
   File "E:\rep\mlops-tasks\run.py", line 111, in read_data_file
     raise ValueError(f"The data file is missing the 'close' column. It only has: {list(data_table.columns)}")
 ValueError: The data file is missing the 'close' column. It only has: ['timestamp,open,high,low,close,volume_btc,volume_usd']
-2026-02-26 11:18:17 | INFO     | ============================================================
-2026-02-26 11:18:17 | INFO     | JOB ENDED WITH ERRORS
-2026-02-26 11:18:17 | INFO     | ============================================================
+2026-02-26 11:19:07 | INFO     | ============================================================
+2026-02-26 11:19:07 | INFO     | JOB ENDED WITH ERRORS
+2026-02-26 11:19:07 | INFO     | ============================================================
