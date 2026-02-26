@@ -16,4 +16,4 @@ CMD ["python", "run.py", \
      "--input", "data.csv", \
      "--config", "config.yaml", \
      "--output", "metrics.json", \
-     "--log-file", "run.log"]
+     "--log-file", "run.log"] 

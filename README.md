@@ -63,4 +63,4 @@ docker run --rm -v $(pwd)/output:/app/output mlops-task \
 ## Signal Logic
 - `signal = 1` if `close > rolling_mean`
 - `signal = 0` otherwise
-- Rows where rolling mean is undefined (first `window-1` rows) are excluded
+- Rows where rolling mean is undefined (first `window-1` rows) are excluded 
