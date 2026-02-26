@@ -1,0 +1,6 @@
+{
+  "version": "v1",
+  "status": "error",
+  "message": "The data file is missing the 'close' column. It only has: ['timestamp,open,high,low,close,volume_btc,volume_usd']",
+  "latency_ms": 28
+}
