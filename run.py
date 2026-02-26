@@ -100,7 +100,7 @@ def read_data_file(data_file_path: str, messenger: logging.Logger) -> pd.DataFra
 
     try:
         # We try to read the file normally first.
-        data_table = pd.read_csv(path_object, sep=None, engine='python')
+        data_table = pd.read_csv(path_object, sep=',')
         
         # If the file was read but only has one column containing commas, it's likely a separator issue.
         if len(data_table.columns) == 1 and "," in data_table.columns[0]:
