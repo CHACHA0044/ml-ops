@@ -53,7 +53,7 @@ def build_error_report(script_version: str, error_message: str) -> dict:
     return {
         "version": script_version,
         "status": "error",
-        "message": error_message,
+        "error_message": error_message,
     }
 
 
@@ -85,7 +85,7 @@ def read_settings(config_file_path: str, messenger: logging.Logger) -> dict:
     if not isinstance(settings["version"], str):
         raise ValueError(f"The 'version' should be text, but I got {type(settings['version']).__name__}.")
 
-    messenger.info("Settings loaded and checked! ✓")
+    messenger.info("Settings loaded and checked!")
     messenger.info(f"  Seed value: {settings['seed']}")
     messenger.info(f"  Calculation window: {settings['window']}")
     messenger.info(f"  Version: {settings['version']}")
@@ -99,12 +99,8 @@ def read_data_file(data_file_path: str, messenger: logging.Logger) -> pd.DataFra
         raise FileNotFoundError(f"Sorry, I couldn't find the data file at: {data_file_path}")
 
     try:
-        # We try to read the file normally first.
-        data_table = pd.read_csv(path_object, skipinitialspace=True)
-        
-        # If the file was read but only has one column containing commas, it's likely a separator issue.
-        if len(data_table.columns) == 1 and "," in data_table.columns[0]:
-            data_table = pd.read_csv(path_object, sep=",")
+        # We specify the separator as a comma explicitly to meet the task requirements.
+        data_table = pd.read_csv(path_object, sep=",")
     except Exception as error:
         raise ValueError(f"There's something wrong with the CSV format: {error}")
 
